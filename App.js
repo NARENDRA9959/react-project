@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const jsxSpanElement = <h1 className='heading'>Welcome to React Course</h1>;
-
-console.log("jsxSpanElement", jsxSpanElement);
+const CourseGreeting = ({courseName,courseDuration}) => {
+    return (<div>
+        <span>
+            <h1 className='heading'>Welcome to {courseName} Course, Duration : {courseDuration} days</h1>
+        </span>
+    </div>)
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(jsxSpanElement);
+root.render(<CourseGreeting courseName="React" courseDuration="45"/>);
